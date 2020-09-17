@@ -124,7 +124,18 @@ h1 {
 #contact_link a {
     color: #000000;
     font-style: normal;
-    text-decoration: none;
+    text-decoration: underline;
     padding: 0.1em;
     line-height: 1.5em;
+}
+
+
+.tab {
+    margin-left: 5%;
+}
+
+#vitae a {
+    color: #23238e;
+    font-style: normal;
+    text-decoration: underline;
 }
