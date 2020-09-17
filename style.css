@@ -6,13 +6,14 @@
     font-size: 2em;
 }
 
-#ya_boi span{
+#ya_boi a{
     color: #000000;
     font-style: normal;
     text-decoration: none;
     padding: 0.2em;
     line-height: 1.5em;
 }
+
 
 #nav_col_left {
     padding-top: 2.5em;
