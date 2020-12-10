@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Writing Grants</title>
+    </head>
+    <body>
+        <div id="logo_header_container">
+            <a href="index.html">WRITING GRANTS </a>
+            <hr>
+            <h1>Advice from a Grad Student.</h1>
+        </div>
+        <div id="main_container" class="clearfix" style="display: block">
+            <div id="nav_col_left_subsection" style="display: block">
+                <a href="general-advice.html">General Advice</a>
+                <a href="summary-abstract.html">Summary/Abstract</a>
+                <a href="bibliography.html">Bibliography</a>
+                <a href="institutional-letters.html">Institutional Letters</a>
+                <a href="research-proposal.html">Research Proposal</a>
+                <a href="training-plan.html">Training Plan</a>
+                <a href="animal-work.html">Animal Work</a>
+                <a href="rcr.html">RCR</a>
+                <a href="specific-aims.html">Specific Aims</a>
+                <a href="rec-letters.html">Rec letters</a>
+                <a href="biosketch.html">BioSketch</a>
+                <a href="reviewers.html">Reviewers</a>
+                <a href="grants.html">Grants</a>
+            </div>
+        </div>
+        <div style="width: 100%; max-width: 780px; margin: 0 auto; font-size: 14px;" id="contact_link">
+            <h1>Reviewers (and their comments)</h1>
+            <p>As long as your grant passes some initial checks to get reviewed, it is very typical for you to receive comments or grades
+                back from the actual people who reviewed your content. Now seeing these comments can make you feel some type of way, but 
+                the feedback is generally quite useful. Grants are highly competitive but many of them allow you to apply more than once. Thus
+                it can be very helpful to go through your reviewer comments very seriously to look for definite areas to improve on your next application.
+                In fact in some applications, there is a specific prompt for you to complete if it is a resubmission and you must make your case showing 
+                where you improved from the previous application.
+            </p>
+            <ul><u>Some common review metrics:</u>
+                <li>Impact of research</li>
+                <li>Personal evaluation (your academic/research background)</li>
+                <li>Training plan evaluation (is this fellowship going to make you a better scientist)</li>
+                <li>Research proposal evaluation (is your research sound)</li>
+                <li>Personal statement (are you unique and driven)</li>
+                <li>Letters of recommendation (how much do people like you?)</li>
+                <li>Alignment with program goals (do you personally fit the mission statement for the fellowship)</li>
+            </ul>
+            <p>Easy improvements</p>
+            <ul>
+                <li>Clarity: I can get annoyed seeing comments where the reviewer is asking something that is clearly in the research proposal. However,
+                    if it isn't visible or obvious to the reviewer, than it is 100% your fault. When writing these applications, you have to remember that 
+                    the entire burden of proof is on you to convince the reviewers that you are worthy of this fellowship/grant. So I try to take these comments 
+                    in stride as they are showing me my own weaknesses in communication and will help me be a better writer down the line.
+                </li>
+                <li>Methods: It's impossible to know everything, and often reviewers are experts in a niche field that is tangentially related to your research and will 
+                    be partially biased (in a good way) in what types of experiments they are looking for. It can be good to consider the additional experiments that 
+                    the reviewer suggests as it could strengthen your proposal and you aren't necessarily tied down to performing the exact experiments you propose. Furthermore 
+                    these comments can just highlight areas you are technically weak on, but soon to be stronger.
+                </li>
+                <li>Weak impact: Often this can just be fixed by relating your work to the bigger picture. You may think your research is really cool and important, but again 
+                    the burden of proof is on you to convince the reviewers without a doubt that this research is of paramount importance to the field or the public or etc.
+                </li>
+            </ul>
+        </div>
+       
+
+        <p><button onclick="SendIt()" class="button-sendit">Send It?</button></p>
+        <p>
+            <img src="img/envelope.jpeg" class="envelope" style="position: absolute" width="45px" height="45px">
+        </p>
+        
+        <script>
+            function SendIt(){
+                var cat = document.querySelector("img.envelope");
+                var button = document.querySelector("button.button-sendit");
+                var angle = 0, lastTime = null;
+                function animate(time){
+                    if(lastTime != null)
+                        if(angle < 600)
+                            angle += (time - lastTime) * 0.5;
+                        else{
+                            cat.parentNode.removeChild(cat);
+                            button.parentNode.removeChild(button);
+                            return
+                        }
+                        lastTime= time;
+                    cat.style.left = angle + "px";
+                    requestAnimationFrame(animate);
+                }
+                requestAnimationFrame(animate);
+            }
+        </script>
+    </div>
+    </body>
+</html>
